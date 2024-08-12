@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Counter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="border border-black p-4 rounded-lg shadow-lg bg-white">
+        <div class="flex justify-center space-x-4 mb-4">
+            <button id="allMinus" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">-</button>
+            <button id="allPlus" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">+</button>
+        </div>
+        <div class="grid grid-cols-2 gap-5 w-full">
+            <!-- 1-component column -->
+            <div class="w-full">
+                <h2 class="text-center font-bold mb-4">1-component</h2>
+                <!-- A component -->
+                <div class="border border-black p-2 mb-4 rounded">
+                    <h3 class="font-semibold">A component</h3>
+                    <p>Count: <span id="numA">0</span></p>
+                    <div class="flex space-x-2 mt-2">
+                        <button id="aPlus" class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300">+</button>
+                        <button id="aMinus" class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300">-</button>
+                    </div>
+                </div>
+                <!-- B component -->
+                <div class="border border-black p-2 mb-4 rounded">
+                    <h3 class="font-semibold">B component</h3>
+                    <p>Count: <span id="numB">0</span></p>
+                    <div class="flex space-x-2 mt-2">
+                        <button id="bPlus" class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300">+</button>
+                        <button id="bMinus" class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300">-</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 2-component column -->
+            <div class="w-full">
+                <h2 class="text-center font-bold mb-4">2-component</h2>
+                <!-- C component -->
+                <div class="border border-black p-2 mb-4 rounded">
+                    <h3 class="font-semibold">C component</h3>
+                    <p>Count: <span id="numC">0</span></p>
+                    <div class="flex space-x-2 mt-2">
+                        <button id="cPlus" class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300">+</button>
+                        <button id="cMinus" class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300">-</button>
+                    </div>
+                </div>
+
+                <!-- D component -->
+                <div class="border  border-black p-2 mb-4 rounded">
+                    <h3 class="font-semibold">D component</h3>
+                    <p>Count: <span id="numD">0</span></p>
+                    <div class="flex space-x-2 mt-2">
+                        <button id="dPlus" class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300">+</button>
+                        <button id="dMinus" class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300">-</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>

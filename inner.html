@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Board</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-200 grid w-full grid-cols-1 items-start justify-center h-screen p-6">
+    <div class="w-full  grid grid-cols-4 gap-4">
+        <div class="grid grid-cols-1 bg-[rgba(255,255,255,0.8)] justify-center items-start rounded-lg shadow-md p-4">
+            <h2 class="font-bold text-lg mb-2 flex justify-between">Open <button id="open-list">...</button></h2>
+            <div class="grid grid-cols-1 gap-4 transition-all duration-1000 ease-linear" id="open-tasks">
+                <div class="bg-slate-100 p-2 w-full rounded hover:bg-blue-200 flex justify-between">
+                    <h1 class="font-bold">salom</h1>
+                    <p>1</p>
+                </div>
+                <div class="bg-slate-100 p-2 w-full rounded hover:bg-blue-200 flex justify-between">
+                    <h1 class="font-bold">salom</h1>
+                    <p>2</p>
+                </div>
+                <div class="bg-slate-100 p-2 w-full rounded hover:bg-blue-200 flex justify-between">
+                    <h1 class="font-bold">salom</h1>
+                    <p>3</p>
+                </div>
+                <div class="bg-slate-100 p-2 w-full rounded hover:bg-blue-200 flex justify-between">
+                    <h1 class="font-bold">salom</h1>
+                    <p>4</p>
+                </div>
+            </div>
+            <button id="add1" class=" text-sm text-gray-500 hover:text-gray-700 mt-2 add-task "
+                data-column="open-tasks">Add</button>
+        </div>
+
+        <div class="grid grid-cols-1 bg-[rgba(255,255,255,0.8)] justify-center items-start rounded-lg shadow-md p-4">
+            <h2 class="font-bold text-lg flex justify-between mb-2">Pending <button id="pending-list">...</button></h2>
+            <div class="grid grid-cols-1 gap-4" id="pending-tasks"></div>
+            <button id="add2" class=" text-sm text-gray-500 hover:text-gray-700 mt-2 add-task"
+                data-column="pending-tasks">Add</button>
+        </div>
+
+        <div class="grid grid-cols-1 bg-[rgba(255,255,255,0.8)] justify-center items-start rounded-lg shadow-md p-4">
+            <h2 class="font-bold text-lg flex justify-between mb-2">In Progress <button id="progress-list">...</button></h2>
+            <div class="grid grid-cols-1 gap-4" id="inprog-tasks"></div>
+            <button id="add3" class=" text-sm text-gray-500 hover:text-gray-700 mt-2 add-task"
+                data-column="inprog-tasks">Add</button>
+        </div>
+
+        <div class="grid grid-cols-1 bg-[rgba(255,255,255,0.8)] justify-center items-start rounded-lg shadow-md p-4">
+            <h2 class="font-bold text-lg flex justify-between mb-2">Complete <button id="complete-list">...</button></h2>
+            <div class="grid grid-cols-1 gap-4" id="complete-tasks"></div>
+            <button id="add4" class="text-sm text-gray-500 hover:text-gray-700 mt-2 add-task"
+                data-column="complete-tasks">Add</button>
+        </div>
+    </div>
+    <div id="modal"
+        class="z-30 w-full h-screen left-0 top-0 fixed flex justify-center items-center bg-[rgba(0,0,0,0.7)]">
+        <div class="rounded-lg border-4 shadow-lg shadow-red-700 border-gray-500 w-[450px]  bg-[rgba(4,255,0,0.3)]">
+            <form class="py-3 px-4 font-bold flex flex-col gap-4">
+                <input id="input" class="w-full py-2 px-2 outline-none rounded-lg shadow-lg shadow-yellow-600 "
+                    type="text" placeholder="Enter Your Task">
+                <select id="select">
+                    <option value="open">Open</option>
+                    <option value="pending">Pending</option>
+                    <option value="progress">In Progress</option>
+                    <option value="complete">Complete</option>
+                </select>
+                <button id="save" class="w-[100px] py-1 px-2 ml-auto bg-blue-700 rounded-lg text-white">Save</button>
+            </form>
+        </div>
+    </div>
+    <script src="./inner.js"></script>
+</body>
+
+</html>
